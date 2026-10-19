@@ -6,10 +6,11 @@
             <p>Hello World!</p>
             <div class="row">
                 <div class="col-6">
-                    <Counter />
-                    <Counter />
+                    <Counter value="this.counters[0].value" onChange.bind="() => this.incrementSum(0)" />
+                    <Counter value="this.counters[1].value" onChange.bind="() => this.incrementSum(1)" />
                 </div>
             </div>
+            <p> Counter Sum: <t t-esc="this.sum"/> </p>
             <div class="row">
                 <div class="col-6">
                     <Card title="'asdsa'" content="'sadsada'" />
