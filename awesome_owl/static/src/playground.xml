@@ -12,8 +12,8 @@
             </div>
             <div class="row">
                 <div class="col-6">
-                    <Card />
-                    <Card />
+                    <Card title="'asdsa'" content="'sadsada'" />
+                    <Card title="'sadasd'" content="this.html" />
                 </div>
             </div>
         </div>

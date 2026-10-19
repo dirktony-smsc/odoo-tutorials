@@ -1,4 +1,4 @@
-import { Component  } from "@odoo/owl";
+import { Component, markup } from "@odoo/owl";
 import { Counter } from "./counter/counter";
 import { Card } from "./card/card";
 
@@ -7,7 +7,10 @@ export class Playground extends Component {
 
   static components = { Counter, Card }
 
+  static props = []
+
   setup() {
+    this.html = markup("<div>some content</div>")
   }
 
 }
