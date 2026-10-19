@@ -1,11 +1,11 @@
 import { Component  } from "@odoo/owl";
-// oxlint-disable-next-line no-unused-vars
 import { Counter } from "./counter/counter";
+import { Card } from "./card/card";
 
 export class Playground extends Component {
   static template = "awesome_owl.playground";
 
-  static components = { Counter }
+  static components = { Counter, Card }
 
   setup() {
   }
