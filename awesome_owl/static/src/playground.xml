@@ -13,8 +13,14 @@
             <p> Counter Sum: <t t-esc="this.sum"/> </p>
             <div class="row">
                 <div class="col-6">
-                    <Card title="'asdsa'" content="'sadsada'" />
-                    <Card title="'sadasd'" content="this.html" />
+                    <Card title="'asdsa'">
+                        <p class="card-text">
+                            lorem ipsum asdsads
+                        </p>
+                    </Card>
+                    <Card title="'sadasd'">
+                        <t t-out="this.html"/>
+                    </Card>
                 </div>
             </div>
             <Todos/>
