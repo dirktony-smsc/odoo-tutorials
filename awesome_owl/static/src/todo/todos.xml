@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+    <t t-name="awesome_owl.todos">
+        <div class="p-2">
+            <h3>todos</h3>
+            <ul>
+                <t t-foreach="this.todos" t-as="todo" t-key="todo.id">
+                    <li t-att-class="todo.isCompleted ? 'text-muted text-decoration-line-through' : ''" t-on-click="() => this.toggleCompleted(todo.id)">
+                        <t t-esc="todo.id"/>. <t t-esc="todo.description"/>
+                    </li>
+                    <!-- <TodoListItem id="todo.id" description="todo.description" isCompleted="todo.isCompleted" /> -->
+                </t>
+            </ul>
+        </div>
+    </t>
+
+</templates>

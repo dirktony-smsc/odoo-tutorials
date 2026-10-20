@@ -1,11 +1,12 @@
 import { Component, markup, useState } from "@odoo/owl";
 import { Counter } from "./counter/counter";
 import { Card } from "./card/card";
+import { Todos } from "./todo/todos";
 
 export class Playground extends Component {
   static template = "awesome_owl.playground";
 
-  static components = { Counter, Card }
+  static components = { Counter, Card, Todos }
 
   static props = []
 
@@ -15,7 +16,8 @@ export class Playground extends Component {
       value: 5,
     }, {
       value: 7
-    }])
+      }]);
+
   }
 
   get sum() {

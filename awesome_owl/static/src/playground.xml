@@ -17,6 +17,7 @@
                     <Card title="'sadasd'" content="this.html" />
                 </div>
             </div>
+            <Todos/>
         </div>
     </t>
 
