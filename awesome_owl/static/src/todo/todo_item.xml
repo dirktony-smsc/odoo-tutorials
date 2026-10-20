@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+    <t t-name="awesome_owl.todos.item">
+        <t t-set="todo" t-value="props.todo" />
+        <div class="form-check">
+            <label t-att-class="todo.isCompleted ? 'text-muted text-decoration-line-through' : ''" t-on-click="() => todo.toggleCompleted()">
+                <t t-esc="todo.id"/>. <t t-esc="todo.description"/>
+            </label>
+        </div>
+    </t>
+
+</templates>
