@@ -15,7 +15,6 @@ export class Todos extends Component {
 
   addTodo(ev) {
     if (ev.keyCode == 13 && ev.target.value != "") {
-
       this.model.add(ev.target.value);
       ev.target.value = "";
     }
