@@ -14,6 +14,7 @@
             <label t-att-class="todo.isCompleted ? 'text-muted text-decoration-line-through' : ''">
                 <t t-esc="todo.id"/>. <t t-esc="todo.description"/>
             </label>
+            <span class="fa fa-remove ms-3 text-danger" role="button" t-on-click="() => todo.remove()" />
         </div>
     </t>
 

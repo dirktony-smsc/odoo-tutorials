@@ -16,6 +16,10 @@ export class Todo {
     this.isCompleted = !this.isCompleted;
   }
 
+  remove() {
+    this._model.remove(this.id)
+  }
+
 }
 
 export class TodoModel {
