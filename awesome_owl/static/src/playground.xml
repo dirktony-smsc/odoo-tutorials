@@ -21,6 +21,9 @@
                     <Card title="'sadasd'">
                         <t t-out="this.html"/>
                     </Card>
+                    <Card title="'sadasd'">
+                        <Counter value="this.counters[2].value" onChange.bind="() => this.incrementSum(2)" />
+                    </Card>
                 </div>
             </div>
             <Todos/>

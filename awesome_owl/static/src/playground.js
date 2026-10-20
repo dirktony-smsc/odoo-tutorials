@@ -16,7 +16,9 @@ export class Playground extends Component {
       value: 5,
     }, {
       value: 7
-      }]);
+    }, {
+      value: 2
+    }]);
 
   }
 
