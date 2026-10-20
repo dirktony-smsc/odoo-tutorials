@@ -1,6 +1,7 @@
 import { Component, useState } from "@odoo/owl";
 import { TodoModel } from "./todo";
 import { TodoItem } from "./todo_item";
+import { useAutoFocus } from "../utils";
 
 export class Todos extends Component {
   static template = "awesome_owl.todos";
@@ -11,6 +12,9 @@ export class Todos extends Component {
 
   setup() {
     this.model = useState(new TodoModel());
+
+    useAutoFocus("input")
+
   }
 
   addTodo(ev) {

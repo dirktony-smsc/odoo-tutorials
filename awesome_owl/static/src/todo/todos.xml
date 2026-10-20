@@ -4,7 +4,7 @@
     <t t-name="awesome_owl.todos">
         <div class="d-inline-block border m-2 p-2">
             <h3>Todos</h3>
-            <input class="form-control mb-3" t-on-keyup="addTodo" type="text" placeholder="Add a todo" />
+            <input class="form-control mb-3" t-on-keyup="addTodo" type="text" placeholder="Add a todo" t-ref="input" />
             <div>
                 <t t-foreach="this.model.todos" t-as="todo" t-key="todo.id">
                     <TodoItem todo="todo" />
