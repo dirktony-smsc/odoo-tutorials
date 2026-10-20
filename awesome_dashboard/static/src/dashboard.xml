@@ -14,7 +14,15 @@
                     Leads
                 </button>
             </t>
-            hello dashboard
+            <DashboardItem>
+                Some Content
+            </DashboardItem>
+            <DashboardItem size="2">
+                I love milk
+            </DashboardItem>
+            <DashboardItem>
+                Some Content
+            </DashboardItem>
         </Layout>
     </t>
 

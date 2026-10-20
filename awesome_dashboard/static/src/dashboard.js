@@ -3,13 +3,17 @@ import { registry } from "@web/core/registry";
 import { Layout } from "@web/search/layout"
 import { useService } from "@web/core/utils/hooks";
 import { _t } from "@web/core/l10n/translation";
+import { DashboardItem } from "./dashboard_item/dashboard_item";
 
 class AwesomeDashboard extends Component {
     static template = "awesome_dashboard.AwesomeDashboard";
 
   static components = {
-    Layout
+    Layout,
+    DashboardItem
   }
+
+  static props = []
 
   setup() {
     this.action = useService("action")
