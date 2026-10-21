@@ -14,20 +14,18 @@
                     Leads
                 </button>
             </t>
-            <t t-if="this.statistics.isReady">
-                <t t-set="stats" t-value="this.statistics.data" />
-                <DashboardItem>
-                    <div class="card-body">
+            <div class="d-flex flex-wrap">
+                <t t-if="this.statistics.isReady">
+                    <t t-set="stats" t-value="this.statistics.data" />
+                    <DashboardItem>
                         <h4 class="card-title text-center">
                             The average number of t-shirts by order.
                         </h4>
                         <p class="lead display-3 text-center">
                             <t t-esc="stats.average_quantity" />
                         </p>
-                    </div>
-                </DashboardItem>
-                <DashboardItem size="2">
-                    <div class="card-body">
+                    </DashboardItem>
+                    <DashboardItem size="2">
                         <h4 class="card-title text-center">
                             The average time (in hours) elapsed between the
                                 moment an order is created, and the moment is it sent.
@@ -35,39 +33,37 @@
                         <p class="lead display-3 text-center">
                             <t t-esc="stats.average_time" />
                         </p>
-                    </div>
-                </DashboardItem>
-                <DashboardItem>
-                    <div class="card-body">
+                    </DashboardItem>
+                    <DashboardItem>
                         <h4 class="card-title text-center">
                             The number of cancelled orders, this month.
                         </h4>
                         <p class="lead display-3 text-center">
                             <t t-esc="stats.nb_cancelled_orders" />
                         </p>
-                    </div>
-                </DashboardItem>
-                <DashboardItem>
-                    <div class="card-body">
+                    </DashboardItem>
+                    <DashboardItem>
                         <h4 class="card-title text-center">
                             The number of new orders, this month.
                         </h4>
                         <p class="lead display-3 text-center">
                             <t t-esc="stats.nb_new_orders" />
                         </p>
-                    </div>
-                </DashboardItem>
-                <DashboardItem>
-                    <div class="card-body">
+                    </DashboardItem>
+                    <DashboardItem>
                         <h4 class="card-title text-center">
                             The total amount of orders, this month
                         </h4>
                         <p class="lead display-3 text-center">
                             <t t-esc="stats.total_amount" />
                         </p>
-                    </div>
-                </DashboardItem>
-            </t>
+                    </DashboardItem>
+                    <DashboardItem size="2">
+                        <h4 class="card-title">Shirt orders by size</h4>
+                        <PieChart orders_by_size="stats.orders_by_size" />
+                    </DashboardItem>
+                </t>
+            </div>
         </Layout>
     </t>
 

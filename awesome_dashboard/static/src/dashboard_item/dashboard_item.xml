@@ -2,8 +2,10 @@
 <templates xml:space="preserve">
 
     <t t-name="awesome_dashboard.DashboardItem">
-        <div class="card d-inline-block p-3 m-2" t-att-style="`width: ${18*this.props.size}rem;`">
-            <t t-slot="default"/>
+        <div class="card p-3 m-2" t-att-style="`width: ${18*this.props.size}rem;`">
+            <div class="card-body">
+                <t t-slot="default"/>
+            </div>
         </div>
     </t>
 

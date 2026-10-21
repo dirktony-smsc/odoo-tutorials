@@ -4,6 +4,7 @@ import { Layout } from "@web/search/layout"
 import { useService } from "@web/core/utils/hooks";
 import { _t } from "@web/core/l10n/translation";
 import { DashboardItem } from "./dashboard_item/dashboard_item";
+import { PieChart } from "./pie_chart/pie_chart";
 
 
 class AwesomeDashboard extends Component {
@@ -11,7 +12,8 @@ class AwesomeDashboard extends Component {
 
   static components = {
     Layout,
-    DashboardItem
+    DashboardItem,
+    PieChart
   }
 
   static props = []
