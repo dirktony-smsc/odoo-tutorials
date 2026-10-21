@@ -1,4 +1,4 @@
-import { Component, useState, onWillStart } from "@odoo/owl";
+import { Component, useState } from "@odoo/owl";
 import { registry } from "@web/core/registry";
 import { Layout } from "@web/search/layout"
 import { useService } from "@web/core/utils/hooks";
@@ -21,23 +21,8 @@ class AwesomeDashboard extends Component {
   setup() {
     this.action = useService("action")
 
-    const statistics = useState({
-      isReady: false
-    });
+    this.statistics = useState(useService("awesome_dashboard.statistics"));
 
-    this.statistics = statistics;
-
-    const statService = useService("awesome_dashboard.statistics");
-
-    onWillStart(async () => {
-      const result = await statService.loadStatistics();
-      Object.assign(statistics, {
-        data: result
-      }, {
-        isReady: true
-      });
-    });
-    // console.debug(statistics)
   }
 
   openCustomers() {
