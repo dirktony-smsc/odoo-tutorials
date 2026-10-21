@@ -4,7 +4,7 @@ import { Layout } from "@web/search/layout"
 import { useService } from "@web/core/utils/hooks";
 import { _t } from "@web/core/l10n/translation";
 import { DashboardItem } from "./dashboard_item/dashboard_item";
-import { rpc } from "@web/core/network/rpc";
+
 
 class AwesomeDashboard extends Component {
     static template = "awesome_dashboard.AwesomeDashboard";
@@ -24,15 +24,18 @@ class AwesomeDashboard extends Component {
     });
 
     this.statistics = statistics;
+
+    const statService = useService("awesome_dashboard.statistics");
+
     onWillStart(async () => {
-      const result = await rpc("/awesome_dashboard/statistics", {});
+      const result = await statService.loadStatistics();
       Object.assign(statistics, {
         data: result
       }, {
         isReady: true
       });
     });
-    console.debug(statistics)
+    // console.debug(statistics)
   }
 
   openCustomers() {
